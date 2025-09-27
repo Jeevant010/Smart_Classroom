@@ -1,45 +1,25 @@
-# Frontend Setup
+# Smart Classroom Frontend
 
-This README provides instructions for setting up the frontend project using Vite (React) and Tailwind CSS.
+This is the Vite + React + Tailwind CSS v4.1 dashboard for Smart Classroom.
 
-## Prerequisites
-- Node.js (v14 or higher)
-- npm (v6 or higher)
+## Setup
 
-## Getting Started
+1. Install Node.js (v18+) and npm.
+2. Copy `.env.example` to `.env` and adjust the API URL if needed.
+3. Run:
 
-### 1. Clone the repository
-```bash
-git clone https://github.com/Jeevant010/Smart_Classroom.git
-cd Smart_Classroom/frontend
-```
+   ```bash
+   npm install
+   npm run dev
+   ```
 
-### 2. Install dependencies
-```bash
-npm install
-```
+4. The dashboard runs at [http://localhost:5173](http://localhost:5173).
 
-### 3. Start the development server
-```bash
-npm run dev
-```
+## Connecting to Django Backend
 
-### 4. Build for production
-```bash
-npm run build
-```
+- Make sure your Django backend is running at `http://localhost:8000`
+- If using a different port, update `VITE_API_BASE_URL` in `.env`
 
-## Tailwind CSS Configuration
+## CORS Note
 
-Follow the official Tailwind CSS installation guide to configure your project.
-
-## Components
-- `AttendanceWidget`: Displays attendance information.
-- `AssignmentsWidget`: Displays assignment details.
-- `Dashboard`: Main dashboard layout.
-- `Header`: Top header of the application.
-- `Sidebar`: Navigation sidebar.
-
-## Environment Variables
-
-Use the `.env.example` file to create your own `.env` file for environment variables.
+Ensure your Django backend has CORS enabled (`django-cors-headers`) so the frontend can connect.
